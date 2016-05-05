@@ -2,6 +2,7 @@ ASP.Net API Application with Swashbuckle
 =========
 
 This is a sample ASP.Net Web API application to demmonstrate how to use Swashbuckle to automatically generate Swagger 2.0 docs from **ApiController** types in the project.
+A live site of this sample project is at http://swashapitest.azurewebsites.net.
 
 ##To Run This Example##
 
@@ -13,7 +14,7 @@ This is a sample ASP.Net Web API application to demmonstrate how to use Swashbuc
 
 ## To Get Started with Swagger Doc Generation##
 
-If you have an ASP.Net Web API application and want to add Swashbuckle support for Swagger Doc Generation,
+If you have an ASP.Net Web API application and want to add Swashbuckle support for Swagger doc generation,
 
 * Add NuGet package **Swashbuckle.Core** to your project
 * Copy, paste, and add folder **SwashApiTest/Swagger** to your project
