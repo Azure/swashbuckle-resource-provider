@@ -13,7 +13,7 @@ This is a sample ASP.Net Web API application to demmonstrate how to use Swashbuc
 
 ## To Get Started with Swagger Doc Generation##
 
-If you have an ASP.Net Web API application and want to add Swashbuckle support,
+If you have an ASP.Net Web API application and want to add Swashbuckle support for Swagger Doc Generation,
 
 * Add NuGet package **Swashbuckle.Core** to your project
 * Copy, paste, and add folder **SwashApiTest/Swagger** to your project
