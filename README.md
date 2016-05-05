@@ -11,7 +11,7 @@ This is a sample ASP.Net Web API application to demmonstrate how to use Swashbuc
 * Click *Generate Swagger Doc* on the top bar to see the generated Swagger document
 * Click *Swagger UI* on the top bar to see the Swagger UI that can be used to try out the API calls
 
-## Getting Started with Swashbuckle Support##
+## Getting Started with Swagger Doc Generation##
 
 If you have an ASP.Net Web API application and want to add Swashbuckle support,
 
