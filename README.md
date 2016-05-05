@@ -1,4 +1,4 @@
-Auto-Generate Swagger Docs with Swashbuckle in Asp.Net API Apps
+Auto-Generate Swagger Docs in Asp.Net API Apps
 =========
 
 This is a sample ASP.Net Web API application to demmonstrate how to use Swashbuckle to automatically generate Swagger 2.0 docs from **ApiController** types in the project.
