@@ -1,0 +1,607 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "version": "2016-04-27dev",
+    "title": "SwashApiTest",
+    "description": "Api test client for Swashbuckle"
+  },
+  "host": "swashapitest.azurewebsites.net",
+  "schemes": [ "https" ],
+  "paths": {
+    "/api/Account/AddExternalLogin": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_AddExternalLogin",
+        "operationId": "Account_AddExternalLogin",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddExternalLoginBindingModel" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/ChangePassword": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_ChangePassword",
+        "operationId": "Account_ChangePassword",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/ChangePasswordBindingModel" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/ExternalLogin": {
+      "get": {
+        "tags": [ "Account" ],
+        "description": "Account_GetExternalLogin",
+        "operationId": "Account_GetExternalLogin",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "provider",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "error",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/ExternalLogins": {
+      "get": {
+        "tags": [ "Account" ],
+        "description": "Account_GetExternalLogins",
+        "operationId": "Account_GetExternalLogins",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "returnUrl",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "generateState",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/ExternalLoginView" }
+            }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/Logout": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_Logout",
+        "operationId": "Account_Logout",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [ { "$ref": "#/parameters/api-version" } ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/ManageInfo": {
+      "get": {
+        "tags": [ "Account" ],
+        "description": "Account_GetManageInfo",
+        "operationId": "Account_GetManageInfo",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "returnUrl",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "generateState",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ManageInfoView" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/Register": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_Register",
+        "operationId": "Account_Register",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/RegisterBindingModel" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/RegisterExternal": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_RegisterExternal",
+        "operationId": "Account_RegisterExternal",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/RegisterExternalBindingModel" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/RemoveLogin": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_RemoveLogin",
+        "operationId": "Account_RemoveLogin",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/RemoveLoginBindingModel" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/SetPassword": {
+      "post": {
+        "tags": [ "Account" ],
+        "description": "Account_SetPassword",
+        "operationId": "Account_SetPassword",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/SetPasswordBindingModel" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Account/UserInfo": {
+      "get": {
+        "tags": [ "Account" ],
+        "description": "Account_GetUserInfo",
+        "operationId": "Account_GetUserInfo",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [ { "$ref": "#/parameters/api-version" } ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/UserInfoView" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Products/GetAllProducts": {
+      "get": {
+        "tags": [ "Products" ],
+        "description": "Products_GetAllProducts",
+        "operationId": "Products_GetAllProducts",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [ { "$ref": "#/parameters/api-version" } ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Product" }
+            }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Products/GetProduct/{id}": {
+      "get": {
+        "tags": [ "Products" ],
+        "description": "Products_GetProduct",
+        "operationId": "Products_GetProduct",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Object" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Values/Delete/{id}": {
+      "delete": {
+        "tags": [ "Values" ],
+        "description": "Values_Delete",
+        "operationId": "Values_Delete",
+        "consumes": [ ],
+        "produces": [ ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Values/Get": {
+      "get": {
+        "tags": [ "Values" ],
+        "description": "Values_Get",
+        "operationId": "Values_Get",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [ { "$ref": "#/parameters/api-version" } ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Values/Get/{id}": {
+      "get": {
+        "tags": [ "Values" ],
+        "description": "Values_Get",
+        "operationId": "Values_Get",
+        "consumes": [ ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "type": "string" }
+          },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Values/Post": {
+      "post": {
+        "tags": [ "Values" ],
+        "description": "Values_Post",
+        "operationId": "Values_Post",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ ],
+        "parameters": [
+          {
+            "name": "value",
+            "in": "body",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/Values/Put/{id}": {
+      "put": {
+        "tags": [ "Values" ],
+        "description": "Values_Put",
+        "operationId": "Values_Put",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "value",
+            "in": "body",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          { "$ref": "#/parameters/api-version" }
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "default": { "description": "default response. To add more details later" }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "AddExternalLoginBindingModel": {
+      "required": [ "ExternalAccessToken" ],
+      "type": "object",
+      "properties": { "ExternalAccessToken": { "type": "string" } }
+    },
+    "ChangePasswordBindingModel": {
+      "required": [ "OldPassword", "NewPassword" ],
+      "type": "object",
+      "properties": {
+        "OldPassword": { "type": "string" },
+        "NewPassword": {
+          "maxLength": 100,
+          "minLength": 6,
+          "type": "string"
+        },
+        "ConfirmPassword": { "type": "string" }
+      }
+    },
+    "ExternalLoginView": {
+      "type": "object",
+      "properties": {
+        "Name": { "type": "string" },
+        "Url": { "type": "string" },
+        "State": { "type": "string" }
+      }
+    },
+    "ManageInfoView": {
+      "type": "object",
+      "properties": {
+        "LocalLoginProvider": { "type": "string" },
+        "Email": { "type": "string" },
+        "Logins": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/UserLoginInfoView" }
+        },
+        "ExternalLoginProviders": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/ExternalLoginView" }
+        }
+      }
+    },
+    "Object": {
+      "type": "object",
+      "properties": { }
+    },
+    "Product": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": { "type": "string" },
+        "Category": { "type": "string" },
+        "Price": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "RegisterBindingModel": {
+      "required": [ "Email", "Password" ],
+      "type": "object",
+      "properties": {
+        "Email": { "type": "string" },
+        "Password": {
+          "maxLength": 100,
+          "minLength": 6,
+          "type": "string"
+        },
+        "ConfirmPassword": { "type": "string" }
+      }
+    },
+    "RegisterExternalBindingModel": {
+      "required": [ "Email" ],
+      "type": "object",
+      "properties": { "Email": { "type": "string" } }
+    },
+    "RemoveLoginBindingModel": {
+      "required": [ "LoginProvider", "ProviderKey" ],
+      "type": "object",
+      "properties": {
+        "LoginProvider": { "type": "string" },
+        "ProviderKey": { "type": "string" }
+      }
+    },
+    "SetPasswordBindingModel": {
+      "required": [ "NewPassword" ],
+      "type": "object",
+      "properties": {
+        "NewPassword": {
+          "maxLength": 100,
+          "minLength": 6,
+          "type": "string"
+        },
+        "ConfirmPassword": { "type": "string" }
+      }
+    },
+    "UserInfoView": {
+      "type": "object",
+      "properties": {
+        "Email": { "type": "string" },
+        "HasRegistered": { "type": "boolean" },
+        "LoginProvider": { "type": "string" }
+      }
+    },
+    "UserLoginInfoView": {
+      "type": "object",
+      "properties": {
+        "LoginProvider": { "type": "string" },
+        "ProviderKey": { "type": "string" }
+      }
+    }
+  },
+  "parameters": {
+    "api-version": {
+      "name": "api-version",
+      "in": "query",
+      "description": "Client Api Version.",
+      "required": true,
+      "type": "string"
+    },
+    "subscriptionId": {
+      "name": "subscriptionId",
+      "in": "path",
+      "description": "The Subscription ID.",
+      "required": true,
+      "type": "string"
+    }
+  }
+}
