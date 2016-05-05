@@ -8,8 +8,8 @@ This is a sample ASP.Net Web API application to demmonstrate how to use Swashbuc
 * Download the code to the local machine
 * Open *SwashApiTest.sln* with Visual Studio 2015
 * F5 to run the application. The home page will open in a browser
-* Click **Generate Swagger Doc** on the top bar to see the generated Swagger document
-* Click **Swagger UI** on the top bar to see the Swagger UI that can be used to try out the API calls
+* Click *Generate Swagger Doc* on the top bar to see the generated Swagger document
+* Click *Swagger UI* on the top bar to see the Swagger UI that can be used to try out the API calls
 
 ## Getting Started with Swashbuckle Support##
 
@@ -21,7 +21,7 @@ If you have an ASP.Net Web API application and want to add Swashbuckle support,
 
 ##To Customize the Swagger Doc Generation##
 
-With Swashbuckle, you can do a lot customizations to your Swagger doc generation.
+With Swashbuckle, you can do a lot of customizations to your Swagger doc generation.
 
 * Open Swagger/SwaggerConfig.cs, update the following to point your Swagger document to a host other than the default.
 ```
