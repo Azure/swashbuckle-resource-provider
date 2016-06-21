@@ -47,3 +47,7 @@ With Swashbuckle, you can do a lot of customizations to your Swagger doc generat
      and adding a default reponse code to all responses, amoung others.
 
 * F5 to run your project. The generated doc should be at *[root]/swagger/docs/[your new api version]*
+
+##To Learn More
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
